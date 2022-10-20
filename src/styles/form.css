@@ -1,0 +1,114 @@
+.form__container{
+    width: 45%;
+    height: 70%;
+    border: 1px solid rgba(0, 0, 0, 0.37);
+    background-color: #fff;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: 
+    "col1 col2"
+    "col1 col2"
+    "col1 col2"
+    "mensaje col2";
+}
+
+.form__col1{
+    grid-area: col1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.col1__title{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin:20px 0 5px;
+    color: rgb(103, 12, 207);
+}
+
+.col1__span{
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.427);
+}
+
+.col1__form{
+    flex-basis: 70%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.col1__input{
+    width: 80%;
+    padding: 0.5rem 0.2rem;
+    border-radius: 4px;
+    border: 1px  solid grey;
+    transition: transform 0.5s;
+    overflow: hidden;
+}
+
+.col1__input:focus{
+    transform: translateY(5px);
+    background-color: rgba(129, 12, 207, 0.5);
+    color: #fff;
+}
+
+
+
+.col1__button{
+    background-color: rgb(103, 12, 207);
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    padding: 0.3rem 0.5rem;
+    color: #fff;
+}
+
+.form__col2{ 
+    grid-area: col2;
+}
+
+.col2__img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0 15px 15px 0;
+}
+
+.form__mensaje--fallido{
+    grid-area: mensaje;
+    color: rgb(252, 4, 4);
+    background-color: rgba(255, 0, 0, 0.462);
+    font-size: 0.6rem;
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 0 5px;
+}
+
+.form__mensaje--exitoso{
+    grid-area: mensaje;
+    color: white;
+    background-color: rgba(0, 128, 0, 0.467);
+    font-size: 0.6rem;
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 0 5px;
+}
